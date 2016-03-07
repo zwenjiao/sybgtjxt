@@ -1,0 +1,26 @@
+meta中charset要不ide中的 text file encoding一致 
+最好用utf8 因为数据库也是utf8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTDHTML 4.01//EN"
+
+"http://www.w3.org/TR/html4/strict.dtd">
+这段文本要加 因为如果不加 firefox就会用怪异模式解析 而不是标准规范模式
+zysj.php中$sql = "select * from releaseassignment,assignment where releaseassignment.assignmentid=assignment.assignmentid";
+// date_default_timezone_set ( 'PRC' );
+// $date = date ( 'Y-m-d', time () );
+// echo $date;
+
+$result = mysql_query ( $sql ) or die (mysql_error());
+$RecordCount = mysql_num_rows ( $result );
+ //echo $RecordCount;
+$PageCount = ceil ( $RecordCount / $page_count );
+// echo $PageCount;
+$offect=($page-1)*$page_count;
+$pro=$_COOKIE["pro"];
+$grade=$_COOKIE["grade"];
+// echo $pro;
+// echo $grade;
+$select=mysql_query("select * from releaseassignment where pro='$pro' and grade='$grade'  order by assignmentid desc limit $offect,$page_count");
+?>
+$sql 和$select可能不对
+$num可能为3,如果数据库数据多的话？

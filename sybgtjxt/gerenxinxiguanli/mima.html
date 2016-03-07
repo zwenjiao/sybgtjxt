@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTDHTML 4.01//EN"
+
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8" >
+<title>密码</title>
+
+
+<!-- Le styles -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    
+    
+     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+
+
+
+    <script type="text/javascript">
+    function YanZheng()
+    {
+        var NewPwd=document.getElementById("NewPwd").value;
+        var QuePwd=document.getElementById("QuePwd").value;
+        if(NewPwd=="")
+        {
+            alert("新密码不能为空");
+            form1.NewPwd.focus();
+            return false;
+        }
+        if(QuePwd=="")
+        {
+            alert("确认密码不能为空");
+            form1.QuePwd.focus();
+            return false;
+        }
+        if(QuePwd!=NewPwd)
+        {
+            alert("新密码和确认密码不一致");
+            return false;
+        }
+    }
+    </script>
+
+</head>
+<body>
+
+<form name="form1" method="post" action="mima.php" id="form1"  class="form-horizontal">
+<div class="control-group">
+  <label class="control-label" for="NewPwd">新密码</label>
+  <div class="controls">
+  <input type="text" name="NewPwd" id="NewPwd"  >
+  </div>
+  
+  </div>
+
+
+<div class="control-group">
+  <label class="control-label" for="QuePwd">确认新密码</label>
+  <div class="controls">
+  <input type="text" name="QuePwd" id="QuePwd"  >
+  </div>
+  
+  </div>
+  
+  
+  <div class="control-group">
+    <div class="controls">
+ <button class="btn btn-large btn-primary" type="submit"   onclick="return YanZheng();" >Submit</button>
+ 
+ 
+ 
+ </div>
+  </div>
+
+</form>
+</body>
+</html>

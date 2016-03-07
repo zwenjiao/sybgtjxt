@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+body{
+	
+		font-size:small;
+	 	font-family:"宋体","Arial Narrow",HELVETICA;
+		background-color:#fff;
+		
+		padding:0;
+		
+}
+img{
+	
+	vertical-align:middle;
+	
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align: center;
+}
+
+td{
+	padding:0px;
+}
+.td_vertical{
+	vertical-align:top;
+}
+#td_shiye{
+	padding-bottom: 50px;
+}
+#mima{
+	padding-bottom:5px;
+}
+#yonghuming{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+
+
+
+

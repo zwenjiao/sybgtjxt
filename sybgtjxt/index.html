@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<title>实验报告提交系统</title>
+
+<style type="text/css">
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: small;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	
+	text-decoration: none;
+}
+ .form-signin {
+	 padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+       
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+p {
+	text-align: center;
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+}
+img {
+	vertical-align: middle;
+	margin: 0px;
+	padding: 0px;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+}
+
+#head {
+	margin-top: 50px;
+	
+}
+#middle {
+	margin-bottom: 50px;
+	
+}
+#button_reset{
+	margin-left:116px;
+}
+#footer{
+		  	text-align: center;
+		  }
+</style>
+<script type="text/javascript">
+        function YanZheng(){
+            var UserId = document.getElementById("UserId").value;
+            var Pwd = document.getElementById("Pwd").value;
+            if (UserId =="" ) {
+                alert("请输入用户名");
+				form1.UserId.focus();
+                return false;
+            }
+			if (Pwd =="" ) {
+                alert("请输入密码");
+				form1.Pwd.focus();
+                return false;
+			}
+			return true;
+        }
+        function Reset() {
+            document.getElementById("UserId").value = "";
+            document.getElementById("Pwd").value = "";
+        }
+    </script>
+</head>
+
+<body>
+<div>
+<p id="head"> 
+<img src="images/7.17_02.png" alt="学校" />
+
+<img src="images/7.17_03.jpg" alt="太阳" />
+</p>
+</div>
+<div>
+<p id="middle">
+<img src="images/7.17_05.jpg" alt="实验报告提交系统" />
+</p>
+</div>
+
+    <div class="container">
+
+      <form class="form-signin" name="form1" method="post" action="indexpost.php" 
+		onsubmit="return YanZheng();">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="input-block-level" placeholder="学号" name="UserId" id="UserId">
+        <input type="password" class="input-block-level" placeholder="初始密码为学号" name="Pwd" id="Pwd">
+
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+         <button class="btn btn-large btn-primary" id="button_reset" type="submit" onclick="Reset()">Reset</button>
+      </form>
+
+    </div> <!-- /container -->
+    
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit"> &copy;南京信息工程大学</p>
+      </div>
+    </div>
+</body>
+</html>
